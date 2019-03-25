@@ -1,1 +1,1 @@
-Lessons Learned - Next js / Prismic.io
+Lessons Learned - Next js / Prismic.io -- MOBILE FIRST
