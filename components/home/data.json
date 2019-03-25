@@ -1,0 +1,54 @@
+{
+  "analyses": [
+    {
+      "title": "Why XYZ failed",
+      "url": "https://github.com/primer/octicons/tree/master/lib/octicons_react",
+      "author": "Paul Graham",
+      "intro": " Two weeks ago, I went to San Francisco, and here are the first three, and",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l",
+      "position": "CEO - Shotgun",
+      "likes": "900",
+      "views": "5000",
+      "keywords": "tech sunglasses market-fit",
+      "category": "Tech",
+      "sub-category": "General"
+    },
+    {
+      "title": "Food-tech: what I had underestimated",
+      "url": "https://github.com/primer/octicons/tree/master/lib/octicons_react",
+      "author": "Scott Galloway",
+      "intro": "I was planning on going to Silicon Valley. That opportunity came and",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l",
+      "position": "CEO - Shotgun",
+      "likes": "1200",
+      "views": "10000",
+      "keywords": "marketing confidence product-management",
+      "category": "Media",
+      "sub-category": "Business"
+    },
+    {
+      "title": "How my VC got me trapped",
+      "url": "https://github.com/primer/octicons/tree/master/lib/octicons_react",
+      "author": "Elon Musk",
+      "intro": "Dash ... banking and then did strategy at a large media company in NYC.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l",
+      "position": "CEO - Shotgun",
+      "likes": "2100",
+      "views": "7654",
+      "keywords": "testing investors VC-funded",
+      "category": "Tech",
+      "sub-category": "Deep-tech"
+    },
+    {
+      "title": "HealthTech data analytics: unforeseen technical difficulties",
+      "url": "https://github.com/primer/octicons/tree/master/lib/octicons_react",
+      "author": "Goethe Dupont",
+      "intro": " I could maybe solve 25% of Leetcode Medium problems with infinite time. So I'm going ",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l",
+      "position": "CEO - Shotgun",
+      "likes": "1800",
+      "views": "7890",
+      "keywords": "student first-timer insider-knowledge"
+    }
+  ]
+}
