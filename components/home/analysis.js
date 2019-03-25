@@ -30,6 +30,7 @@ class Analysis extends React.Component {
     const apiEndpoint = "https://lessonslearned.prismic.io/api/v2";
     // or http://lessonslearned.prismic.io/api/v2/documents/search?ref=XJjwjhAAAAVodNpn
     // XJjwjhAAAAVodNpn being my master red, returning 4 documents
+    // actually no -set to JSON and ok returned
 
     Prismic.api(apiEndpoint).then(api => {
       api
@@ -37,7 +38,7 @@ class Analysis extends React.Component {
         .then(response => {
           if (response) {
             this.setState({
-              doc: response.results[0]
+              doc: response.results[response.results.length - 1]
             });
           }
         });
