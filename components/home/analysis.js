@@ -26,7 +26,7 @@ class Analysis extends React.Component {
     this.toggleAdded = this.toggleAdded.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const apiEndpoint = "https://lessonslearned.prismic.io/api/v2";
     // or http://lessonslearned.prismic.io/api/v2/documents/search?ref=XJjwjhAAAAVodNpn
     // XJjwjhAAAAVodNpn being my master red, returning 4 documents
@@ -38,7 +38,7 @@ class Analysis extends React.Component {
         .then(response => {
           if (response) {
             this.setState({
-              doc: response.results[response.results.length - 1]
+              doc: response.results[response.results.length - 1].data
             });
           }
         });
@@ -54,13 +54,29 @@ class Analysis extends React.Component {
   }
 
   render() {
+    const test = () => {
+      Prismic.api("https://lessonslearned.prismic.io/api/v2").then(api => {
+        api
+          .query(Prismic.Predicates.at("document.type", "blog_post"))
+          .then(response => {
+            if (response) {
+              this.setState({
+                doc: response.results[response.results.length - 1].data
+              });
+              console.log(this.state.doc);
+            }
+          });
+      });
+      return;
+    };
+
     return this.state.analyses.map((analysis, index) => {
       return (
         <div className="black avenir  measure lh-copy " key={index}>
           <div className=" f4 mt3 pt2 mb1 measure-narrow mr4 fw5  ">
             {analysis.title}
           </div>
-
+          {test()}
           <div className="lh-copy measure-narrow ">
             <div className="garamond mr4"> {analysis.intro}</div>
             <button
