@@ -26,6 +26,20 @@ class Analysis extends React.Component {
     this.toggleAdded = this.toggleAdded.bind(this);
   }
 
+  componentWillMount() {
+    const apiEndpoint = "https://lessonslearned.prismic.io/api/v2";
+
+    Prismic.api(apiEndpoint).then(api => {
+      api
+        .query(Prismic.Predicates.at("document.type", "blog_post"))
+        .then(response => {
+          if (response) {
+            this.setState({ doc: response.results[0] });
+          }
+        });
+    });
+  }
+
   toggleDescriptionShown() {
     this.setState({ descriptionShown: !this.state.descriptionShown });
   }
