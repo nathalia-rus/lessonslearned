@@ -28,13 +28,17 @@ class Analysis extends React.Component {
 
   componentWillMount() {
     const apiEndpoint = "https://lessonslearned.prismic.io/api/v2";
+    // or http://lessonslearned.prismic.io/api/v2/documents/search?ref=XJjwjhAAAAVodNpn
+    // XJjwjhAAAAVodNpn being my master red, returning 4 documents
 
     Prismic.api(apiEndpoint).then(api => {
       api
         .query(Prismic.Predicates.at("document.type", "blog_post"))
         .then(response => {
           if (response) {
-            this.setState({ doc: response.results[0] });
+            this.setState({
+              doc: response.results[0]
+            });
           }
         });
     });
