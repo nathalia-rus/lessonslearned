@@ -31,7 +31,7 @@ class Analysis extends React.Component {
   }
 
   toggleAdded() {
-    this.setState({ descriptionShown: !this.state.descriptionShown });
+    this.setState({ added: !this.state.added });
   }
 
   render() {
