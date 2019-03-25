@@ -51,7 +51,7 @@ class Analysis extends React.Component {
                 this.toggleDescriptionShown();
               }}
             >
-              {descriptionShown ? (
+              {this.state.descriptionShown ? (
                 <div className="tl f5 garamond lh-copy measure-narrow mt2 fw1 i">
                   {analysis.description}
                   <Octicon
@@ -70,7 +70,7 @@ class Analysis extends React.Component {
                 <div className="f6"> {analysis.position} </div>
                 <div className="basket">
                   <div className="f7 mt2 centered pt1"> £9.99 </div>
-                  {added ? (
+                  {this.state.added ? (
                     <button
                       className="btn link"
                       onClick={e => {
