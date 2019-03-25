@@ -22,10 +22,20 @@ class Analysis extends React.Component {
       descriptionShown: false,
       added: false
     };
+    this.toggleDescriptionShown = this.toggleDescriptionShown.bind(this);
+    this.toggleAdded = this.toggleAdded.bind(this);
+  }
+
+  toggleDescriptionShown() {
+    this.setState({ descriptionShown: !this.state.descriptionShown });
+  }
+
+  toggleAdded() {
+    this.setState({ descriptionShown: !this.state.descriptionShown });
   }
 
   render() {
-    return analyses.map((analysis, index) => {
+    return this.state.analyses.map((analysis, index) => {
       return (
         <div className="black avenir  measure lh-copy " key={index}>
           <div className=" f4 mt3 pt2 mb1 measure-narrow mr4 fw5  ">
@@ -38,12 +48,12 @@ class Analysis extends React.Component {
               className="f2 btn link"
               onClick={e => {
                 e.preventDefault();
-                setDescriptionShown(!descriptionShown);
+                this.toggleDescriptionShown();
               }}
             >
               {descriptionShown ? (
                 <div className="tl f5 garamond lh-copy measure-narrow mt2 fw1 i">
-                  {analysis.description}{" "}
+                  {analysis.description}
                   <Octicon
                     icon={ChevronUp}
                     size="small"
@@ -65,7 +75,7 @@ class Analysis extends React.Component {
                       className="btn link"
                       onClick={e => {
                         e.preventDefault();
-                        setAdded(!added);
+                        this.toggleAdded();
                       }}
                     >
                       <div className="add-round ml2 mt2 centered green">
@@ -81,7 +91,7 @@ class Analysis extends React.Component {
                       className="btn link"
                       onClick={e => {
                         e.preventDefault();
-                        setAdded(!added);
+                        this.toggleAdded();
                       }}
                     >
                       <div className=" add-round ml2 mt2 centered black-70">
